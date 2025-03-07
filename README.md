@@ -27,9 +27,9 @@ As técnicas e tecnologias utilizadas foram:
 - `Lazy loading`
 - `RxJs`
 
-## 📁 Acesso ao projeto
+## 📁 Figma do projeto
 
-Você pode [acessar o código fonte do projeto inicial]() ou [baixá-lo]().
+Você pode [acessar o figma projeto Buscante](https://www.figma.com/community/file/1479537644248558705).
 
 ## 🛠️ Abrir e rodar o projeto
 
