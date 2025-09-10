@@ -16,11 +16,14 @@ header a {
   font-size: 18px;
   line-height: 27px;
   margin-right: 1.5rem;
+  width: 79px;
+  height: 48px;
 }
 
-.logo {
-  display: block;
-  width: 236px;
-  height: 60px;
+button {
+  background-color: #050C42;
+  cursor: pointer;
+  border: none;
 }
+
 

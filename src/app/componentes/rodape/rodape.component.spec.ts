@@ -8,10 +8,10 @@ describe('RodapeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RodapeComponent]
+      declarations: [ RodapeComponent ]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(RodapeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

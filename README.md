@@ -1,38 +1,27 @@
-![Buscante](thumbnail.png)
-
 # Buscante
 
-Aplicação que permite pesquisar e descobrir livros utilizando a API do Google Books. 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
 
-## 🔨 Funcionalidades do projeto
+## Development server
 
-### Pesquisa de Livros:
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-As pessoas podem inserir palavras-chave na barra de pesquisa para buscar livros de forma dinâmica.
+## Code scaffolding
 
-### Detalhes do Livro:
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Ao clicar em um livro específico pode-se obter mais detalhes, como título, sinopse, autoria e outras informações fornecidas pela API do Google Books.
+## Build
 
-### Link para ler prévia do livro:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Link com opção de ler uma prévia do livro.
+## Running unit tests
 
-## ✔️ Técnicas e tecnologias utilizadas
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-As técnicas e tecnologias utilizadas foram:
+## Running end-to-end tests
 
-- `Angular`
-- `Google Books API`
-- `Lazy loading`
-- `RxJs`
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## 📁 Figma do projeto
+## Further help
 
-Você pode [acessar o figma projeto Buscante](https://www.figma.com/community/file/1479537644248558705).
-
-## 🛠️ Abrir e rodar o projeto
-
-Para abrir e rodar o projeto, execute *npm i* para instalar as dependências e *ng serve* para iniciar o projeto.
-
-Depois, acesse [http://localhost:4200/](url) no seu navegador. 
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

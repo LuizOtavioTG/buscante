@@ -1,13 +1,18 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cabecalho',
-  imports: [CommonModule, RouterLink],
   templateUrl: './cabecalho.component.html',
-  styleUrl: './cabecalho.component.css'
+  styleUrls: ['./cabecalho.component.css']
 })
 export class CabecalhoComponent {
 
+  constructor(private router: Router) {}
+
+  irParaTelaInicial() {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.router.onSameUrlNavigation = 'reload'
+    this.router.navigate([this.router.url])
+  }
 }
