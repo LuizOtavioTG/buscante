@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { map, switchMap } from 'rxjs';
+import { debounceTime, filter, map, switchMap, tap } from 'rxjs';
 import { Item } from 'src/app/models/interfaces';
 import { LivroVolumeInfo } from 'src/app/models/livroVolumeInfo';
 import { LivroService } from 'src/app/service/livro';
@@ -12,12 +12,15 @@ import { LivroService } from 'src/app/service/livro';
 })
 export class ListaLivrosComponent  {
 
- 
+  private readonly  PAUSA = 500;
   campoBusca = new FormControl();
 
   constructor(private service: LivroService) { }
 
   livrosEncontrados$ = this.campoBusca.valueChanges.pipe(
+    tap(() => console.log('Fluxo inicial')),
+    debounceTime(this.PAUSA),
+    filter((valorDigitado)=> valorDigitado.length >= 3),
     switchMap((valorDigitado) => this.service.buscar(valorDigitado)),
     map(items => this.livrosResultadoParaLivros(items))
   )
