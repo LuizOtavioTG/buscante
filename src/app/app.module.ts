@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AutoriaPipe } from './pipes/autoria.pipe';
 import { ContatoComponent } from './views/contato/contato.component';
+import { SobreComponent } from './views/sobre/sobre.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContatoComponent } from './views/contato/contato.component';
     ListaLivrosComponent,
     ModalLivroComponent,
     ContatoComponent,
-    AutoriaPipe
+    AutoriaPipe,
+    SobreComponent
   ],
   imports: [
     BrowserModule,

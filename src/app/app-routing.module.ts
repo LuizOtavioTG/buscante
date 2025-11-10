@@ -2,6 +2,7 @@ import { ListaLivrosComponent } from './views/lista-livros/lista-livros.componen
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContatoComponent } from './views/contato/contato.component';
+import { SobreComponent } from './views/sobre/sobre.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'lista-livros',
     component: ListaLivrosComponent
+  },
+  {
+    path: 'sobre',
+    component: SobreComponent
   },
   {
     path: 'contato',
