@@ -12,16 +12,24 @@ const routes: Routes = [
   },
   {
     path: 'lista-livros',
-    component: ListaLivrosComponent
+    component: ListaLivrosComponent,
+    title: 'Busque um livro - Buscante'
   },
   {
     path: 'sobre',
-    component: SobreComponent
+    component: SobreComponent,
+    title: 'Mais informações - Buscante'
+
   },
   {
     path: 'contato',
-    component: ContatoComponent
+    component: ContatoComponent,
+    title: 'Entre em contato - Buscante'
   },
+  {
+    path: '**',
+    component: ListaLivrosComponent
+  }
 ];
 
 @NgModule({

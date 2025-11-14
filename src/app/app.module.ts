@@ -1,4 +1,4 @@
-import { RouterModule } from '@angular/router';
+import { RouterLinkActive, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,7 +35,8 @@ import { SobreComponent } from './views/sobre/sobre.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterLinkActive
   ],
   providers: [],
   bootstrap: [AppComponent]
