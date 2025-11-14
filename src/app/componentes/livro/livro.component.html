@@ -3,7 +3,9 @@
     src="{{ livro.thumbnail != undefined ? livro.thumbnail  : 'assets/imagens/capa-indisponivel.png'}}"
     alt="Capa do livro">
   <div class="info-card">
-    <p class="titulo">{{ livro.title | slice:0:30 }}</p>
+    <p class="titulo" 
+    [attr.aria-label]="'Título do livro' + livro.title " 
+    >{{ livro.title | slice:0:30 }}</p>
     <p class="informacoes">Autoria:</p>
     <p class="resultado">{{ livro.authors | autoria| slice:0:20}}</p>
     <p class="informacoes">Data de publicação:</p>
