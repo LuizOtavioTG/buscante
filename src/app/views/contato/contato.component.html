@@ -138,7 +138,8 @@
       </button>
       <button
         type="submit"
-        [attr.aria-disabled]="contatoForm.invalid"
+        [disabled]="contatoForm.invalid"
+        [attr.aria-disabled]="contatoForm.invalid ? true : null"
         class="botao-enviar">Enviar
       </button>
     </div>

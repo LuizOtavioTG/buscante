@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { Livro } from 'src/app/models/interfaces';
 
 const body = document.querySelector("body");
@@ -11,6 +11,12 @@ const body = document.querySelector("body");
 export class ModalLivroComponent {
 
   constructor() { }
+
+  @HostListener('document:keydown.escape') fecharModalAoPrecionarEsc(){
+     if(this.statusModal) {
+            this.fecharModal()
+        }
+  }
 
   @Input() livro: Livro;
   statusModal: boolean = true;

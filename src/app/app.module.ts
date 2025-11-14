@@ -2,6 +2,7 @@ import { RouterLinkActive, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { A11yModule } from '@angular/cdk/a11y';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +37,8 @@ import { SobreComponent } from './views/sobre/sobre.component';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    RouterLinkActive
+    RouterLinkActive,
+    A11yModule
   ],
   providers: [],
   bootstrap: [AppComponent]

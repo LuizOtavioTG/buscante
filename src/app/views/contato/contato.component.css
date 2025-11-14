@@ -146,8 +146,13 @@ textarea::placeholder {
   border: 1px solid red;
 }
 
-.contato-botoes .botao-enviar[aria-disabled] {
+.contato-botoes .botao-enviar:disabled {
   background-color: #ccc;
   color: #666;
   cursor: not-allowed;
+}
+
+.contato-botoes .botao-enviar:disabled:hover {
+  background-color: #ccc;
+  color: #666;
 }
