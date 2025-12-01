@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, Output, Renderer2 } from '@angular/core';
 import { Livro } from 'src/app/models/interfaces';
 
 const body = document.querySelector("body");
@@ -10,7 +10,10 @@ const body = document.querySelector("body");
 })
 export class ModalLivroComponent {
 
-  constructor() { }
+  constructor(
+    private renderer: Renderer2,
+    private element: ElementRef
+  ) { }
 
   @HostListener('document:keydown.escape') fecharModalAoPrecionarEsc(){
      if(this.statusModal) {
@@ -22,11 +25,12 @@ export class ModalLivroComponent {
   statusModal: boolean = true;
   @Output() mudouModal = new EventEmitter()
 
-  fecharModal() {
-    this.statusModal = false
-    this.mudouModal.emit(this.statusModal)
-    body.style.overflow = "scroll"
-  }
+   fecharModal() {
+        this.statusModal = false
+        this.mudouModal.emit(this.statusModal)
+        this.renderer.setStyle(
+        this.element.nativeElement.ownerDocument.body, 'overflow', 'scroll')
+    }
 
   esconderScroll(){
     if(this.statusModal == true ) {
